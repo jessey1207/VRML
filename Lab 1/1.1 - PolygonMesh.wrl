@@ -1,0 +1,90 @@
+#VRML V2.0 utf8
+
+Background {skyColor 0 0 1}
+
+
+Shape {
+	appearance Appearance{
+		material Material { 
+			diffuseColor     1 0 1   #red=1, green=0, blue=1
+			specularColor    1 1 1	 #red=1, green=1, blue=1
+			transparency 0.5   # try values between 0 and 1
+			shininess 0.8      # shiny surface, try values between 0 and 1
+			}
+		}
+	geometry IndexedFaceSet {
+		coord Coordinate {
+                    point [
+				#SquarePyramid - bottom vertices
+				-1.0  -1.0   1.0,	#vertex 0
+				1.0   -1.0   1.0,	#vertex 1
+				1.0   -1.0  -1.0,	#vertex 2
+				-1.0  -1.0  -1.0,	#vertex 3
+
+				#PyramidTop - top vertex
+				0.0    1.0   0.0	#vertex 4
+
+				#TriangularPyramid - bottom vertices
+				0.0  3.0   1.0,		#vertex 5
+				1.0  3.0   -1.0,	#vertex 6
+				-1.0  3.0   -1.0,	#vertex 7
+
+				#StarPyramid - bottom vertices
+				0.5    1.5   2.0,	#vertex 8
+				0.0    3.0   2.0,	#vertex 9
+				-0.5   1.5   2.0,	#vertex 10
+				-2.0   1.0   2.0,	#vertex 11
+				-0.5   0.5   2.0,	#vertex 12
+				0.0    -1.0  2.0,	#vertex 13
+				0.5    0.5   2.0,	#vertex 14
+				2.0    1.0   2.0,	#vertex 15
+
+                    ]
+                }
+
+		coordIndex [
+			#SquarePyramid
+			#bottom square
+			 0,  3,  2,  1,  -1,
+			#side1
+			 0,  1,  4, -1,
+			#side2
+			 1,  2,  4, -1,
+			#side3
+			 2,  3,  4, -1,
+			#side4
+			 3,  0,  4, -1,
+
+			#TriangularPyramid
+			#bottom triangle
+			 5,  6,  7, -1,
+			#side1
+			 5,  7,  4, -1,
+			#side2
+			 7  6,  4, -1,
+			#side3
+			 6,  5,  4, -1,
+
+			#StarPyramid
+			#bottom star
+			 8, 9, 10, 11, 12, 13, 14, 15,  -1,
+			#side1
+			 8,  15,  4, -1,
+			#side2
+			 15,  14,  4, -1,
+			#side3
+			 14,  13,  4, -1,
+			#side4
+			 13,  12,  4, -1,
+			#side5
+			 12,  11,  4, -1,
+			#side6
+			 11,  10,  4, -1,
+			#side7
+			 10,  9,  4, -1,
+			#side8
+			 9,  8,  4, -1,
+			]
+			
+	}
+}
